@@ -1,48 +1,76 @@
-graph TD
-  subgraph Frontend
-    FE1[React App]
-    FE2[User Interface]
-    FE3[Movie Search]
-    FE4[Seat Selection]
-    FE5[Booking Management]
-    FE6[User Registration]
-    FE7[Movie Recommendations]
-  end
+```mermaid
+graph TB
+    subgraph "👤 Пользователь"
+        U[Пользователь]
+    end
 
-  subgraph Backend
-    BE1[Spring Boot Application]
-    BE2[REST API]
-    BE3[Seat Availability]
-    BE4[Booking Logic]
-    BE5[User Management]
-    BE6[Movie Data Integration]
-    BE7[Real-time Updates]
-  end
+    %% ---------- Frontend ----------
+    subgraph "🌐 Frontend"
+        U --> |HTTPS| RA[React App<br/>]
+        RA --> |REST API| GLB
+    end
 
-  subgraph Database
-    DB1[MySQL Database]
-    DB2[User Data]
-    DB3[Movie Data]
-    DB4[Booking Records]
-    DB5[Session Information]
-  end
+    %% ---------- Gateway / LB ----------
+    GLB[Nginx<br/>Load Balancer]
 
-  FE1 --> FE2
-  FE2 --> FE3
-  FE3 --> FE4
-  FE4 --> FE5
-  FE5 --> FE6
-  FE6 --> FE7
+    %% ---------- Backend ----------
+    subgraph "⚙️ Spring-Boot Backend"
+        GLB --> |/api/*| SB[Tomcat]
+        SB --> MC[Movie Controller]
+        SB --> BC[Booking Controller]
+        SB --> UC[User Controller]
+        SB --> SC[Seat Controller]
+        SB --> RC[Recommendation Controller]
+    end
 
-  FE1 --> BE2
-  BE2 --> BE3
-  BE2 --> BE4
-  BE2 --> BE5
-  BE2 --> BE6
-  BE2 --> BE7
+    %% ---------- Services ----------
+    subgraph "🔧 Сервисный слой"
+        MC --> MS[Movie Service]
+        BC --> BS[Booking Service]
+        UC --> US[User Service]
+        SC --> SS[Seat Service]
+        RC --> RS[Recommendation Service]
+    end
 
-  BE3 --> DB1
-  BE4 --> DB1
-  BE5 --> DB1
-  BE6 --> DB1
-  BE7 --> DB1
+    %% ---------- Repositories ----------
+    subgraph "🗃️ Доступ к данным"
+        MS --> MR[(Movie Repository)]
+        BS --> BR[(Booking Repository)]
+        US --> UR[(User Repository)]
+        SS --> SR[(Seat Repository)]
+        RS --> RR[(Recommendation Repository)]
+    end
+
+    %% ---------- База ----------
+    subgraph "🐘 MySQL"
+        MR --> DB[(MySQL)]
+        BR --> DB
+        UR --> DB
+        SR --> DB
+        RR --> DB
+    end
+
+    %% ---------- Внешние компоненты ----------
+    subgraph "📦 Внешние ресурсы"
+        RS -.-> |pull data| EXT[External Movie API]
+    end
+
+    %% ---------- Deployment ----------
+    subgraph "🐳 Deployment"
+        RA -.-> |build| STAT[Static Files<br/>CDN]
+        SB -.-> |container| DOCK[Docker<br/>Image]
+        DB -.-> |volume| VOL[(Persistent<br/>Volume)]
+    end
+
+    classDef frontend fill:#61dafb,stroke:#282c34,color:#000
+    classDef backend fill:#6db33f,stroke:#fff,color:#000
+    classDef db fill:#336791,stroke:#fff,color:#fff
+    classDef external fill:#f9d71c,stroke:#000,color:#000
+    classDef deployment fill:#239aef,stroke:#fff,color:#fff
+
+    class RA frontend
+    class SB,MC,BC,UC,SC,RC,MS,BS,US,SS,RS backend
+    class DB,MR,BR,UR,SR,RR,VOL db
+    class EXT external
+    class STAT,DOCK deployment
+```

@@ -152,7 +152,7 @@
 
 ## 4. 🎨 Эскизы интерфейса  
 
-![Окно регистрации.]([moqups/registration.png](https://github.com/Jolire/cinema-system/blob/main/%20docs/moqups/registration.png))
+![Окно регистрации.](moqups/registration.png)
 
 ![Окно входа.](moqups/login.png)
 

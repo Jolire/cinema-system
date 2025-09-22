@@ -152,7 +152,17 @@
 
 ## 4. 🎨 Эскизы интерфейса  
 
- docs/moqups/login.png
+![Окно регистрации.](docs/moqups/registration.png)
+
+![Окно входа.](docs/moqups/login.png)
+
+![Главный экран.](docs/moqups/dashboard.png)
+
+![Окно фильма.](docs/moqups/moviepage.png)
+
+![Окно выбора места.](docs/moqups/selectionseatpage.png)
+
+![Уведомление об успешном заказе.](docs/moqups/ordersuccesfull.png)
 
 ---
 

@@ -152,17 +152,17 @@
 
 ## 4. 🎨 Эскизы интерфейса  
 
-![Окно регистрации.](moqups/registration.png)
+![Registration](moqups/registration.png)
 
-![Окно входа.](moqups/login.png)
+![Legion](moqups/login.png)
 
-![Главный экран.](moqups/dashboard.png)
+![Dashboard](moqups/dashboard.png)
 
-![Окно фильма.](moqups/moviepage.png)
+![Moviepage](moqups/moviepage.png)
 
-![Окно выбора места.](moqups/selectionseatpage.png)
+![Selectionpage](moqups/selectionseatpage.png)
 
-![Уведомление об успешном заказе.](moqups/ordersuccesfull.png)
+![Order succesfull](moqups/ordersuccesfull.png)
 
 ---
 

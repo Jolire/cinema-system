@@ -154,13 +154,13 @@
 
 ![Registration](moqups/registration.png)
 
-![Legion](moqups/login.png)
+![Legin](moqups/login.png)
 
 ![Dashboard](moqups/dashboard.png)
 
-![Moviepage](moqups/moviepage.png)
+![Movie page](moqups/moviepage.png)
 
-![Selectionpage](moqups/selectionseatpage.png)
+![Selection page](moqups/selectionseatpage.png)
 
 ![Order succesfull](moqups/ordersuccesfull.png)
 

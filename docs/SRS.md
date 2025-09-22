@@ -158,11 +158,11 @@
 
 ![Dashboard](moqups/dashboard.png)
 
-![Movie page](moqups/moviepage.png)
+![Moviepage](moqups/moviepage.png)
 
-![Selection page](moqups/selectionseatpage.png)
+![Selectionpage](moqups/selectionseatpage.png)
 
-![Order succesfull](moqups/ordersuccesfull.png)
+![Ordersuccesfull](moqups/ordersuccesfull.png)
 
 ---
 

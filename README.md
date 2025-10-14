@@ -1,30 +1,88 @@
-# cinema-system<div align="center">
+# 🎬 Cinema Ticket Booking System
 
-# Cinema Ticket Booking System 🎬🎟️
+A modern web application for booking cinema tickets online. Built with Spring Boot backend and React frontend.
 
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
-[![Java](https://img.shields.io/badge/Java-17%2B-blue.svg)](https://openjdk.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![REST API](https://img.shields.io/badge/API-RESTful-orange.svg)](https://restfulapi.net/)
+## 📋 Project Documentation
 
-A comprehensive RESTful cinema ticket booking system built with Spring Boot that allows users to browse movies, manage bookings, and reserve seats with ease.
+### 📊 System Requirements Specification
+- **[SRS Document](./docs/SRS.md)** - Complete Software Requirements Specification with use cases, diagrams, and technical requirements
 
-</div>
+### 🗂️ Documentation Structure
+docs/
+├── SRS.md # Software Requirements Specification
+├── diagrams/ # System diagrams and architecture
+│ ├── use_cases/ # Use case diagrams and descriptions
+│ ├── sequences/ # Sequence diagrams
+│ └── classes/ # Class diagrams
+└── api/ # API documentation
 
-## ✨ Features
 
-- **🎥 Movie Management**: CRUD operations for movies and showtimes  
-- **🎟️ Ticket Booking**: Reserve and manage cinema tickets  
-- **🪑 Seat Selection**: Choose specific seats for each showtime  
-- **👤 User Accounts**: Register, authenticate, and manage users  
-- **🔑 Role-Based Access**: Admin and user roles with different permissions  
-- **📊 Booking History**: View and manage past reservations  
-- **📁 Data Persistence**: Powered by relational database integration  
+## 🚀 Features
 
-## 🚀 Tech Stack
+- **User Registration & Authentication** - Secure JWT-based auth system
+- **Movie Catalog** - Browse available movies with details
+- **Session Management** - View showtimes and available seats
+- **Ticket Booking** - Real-time seat selection and booking
+- **Order History** - Track your booking history
+- **Admin Panel** - Manage movies, sessions, and analytics
 
-- **Backend**: Spring Boot (REST API)  
-- **Language**: Java 17+  
-- **Database**: MySQL / PostgreSQL (configurable)  
-- **Build Tool**: Maven  
-- **Security**: Spring Security with JWT authentication  
+## 🛠️ Technology Stack
+
+### Backend
+- **Java 17** - Primary programming language
+- **Spring Boot** - Application framework
+- **Spring Security** - Authentication and authorization
+- **JPA/Hibernate** - ORM and database management
+- **PostgreSQL** - Database system
+- **Maven** - Dependency management
+
+### Frontend
+- **React** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Styling framework
+- **Axios** - HTTP client
+
+## 📁 Project Structure
+cinema-system/
+├── backend/ # Spring Boot application
+│ ├── src/
+│ │ └── main/java/com/cinema/
+│ │ ├── controllers/ # REST controllers
+│ │ ├── services/ # Business logic
+│ │ ├── models/ # Entity classes
+│ │ ├── repositories/ # Data access layer
+│ │ └── security/ # Auth configuration
+│ └── pom.xml
+├── frontend/ # React application
+│ ├── src/
+│ │ ├── components/ # React components
+│ │ ├── pages/ # Page components
+│ │ ├── services/ # API services
+│ │ └── types/ # TypeScript definitions
+│ └── package.json
+└── docs/ # Project documentation
+└── SRS.md # Requirements specification
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Java 17+
+- Node.js 16+
+- PostgreSQL 12+
+
+### Backend Setup
+```bash
+cd backend
+./mvnw spring-boot:run
+Frontend Setup
+```
+```bash
+cd frontend
+npm install
+npm start
+```
+
+### 📚 API Documentation
+The API documentation is available when running the application:
+- Swagger UI: http://localhost:8080/swagger-ui.html
+- API Endpoints: http://localhost:8080/api

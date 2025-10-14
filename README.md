@@ -8,14 +8,13 @@ A modern web application for booking cinema tickets online. Built with Spring Bo
 - **[SRS Document](./docs/SRS.md)** - Complete Software Requirements Specification with use cases, diagrams, and technical requirements
 
 ### 🗂️ Documentation Structure
-docs/
-├── SRS.md # Software Requirements Specification
-├── diagrams/ # System diagrams and architecture
-│ ├── use_cases/ # Use case diagrams and descriptions
-│ ├── sequences/ # Sequence diagrams
-│ └── classes/ # Class diagrams
-└── api/ # API documentation
-
+docs/   
+├── SRS.md # Software Requirements Specification    
+├── diagrams/ # System diagrams and architecture    
+│ ├── use_cases/ # Use case diagrams and descriptions   
+│ ├── sequences/ # Sequence diagrams    
+│ └── classes/ # Class diagrams 
+└── api/ # API documentation    
 
 ## 🚀 Features
 
@@ -43,25 +42,25 @@ docs/
 - **Axios** - HTTP client
 
 ## 📁 Project Structure
-cinema-system/
-├── backend/ # Spring Boot application
-│ ├── src/
-│ │ └── main/java/com/cinema/
-│ │ ├── controllers/ # REST controllers
-│ │ ├── services/ # Business logic
-│ │ ├── models/ # Entity classes
-│ │ ├── repositories/ # Data access layer
-│ │ └── security/ # Auth configuration
-│ └── pom.xml
-├── frontend/ # React application
-│ ├── src/
-│ │ ├── components/ # React components
-│ │ ├── pages/ # Page components
-│ │ ├── services/ # API services
-│ │ └── types/ # TypeScript definitions
-│ └── package.json
-└── docs/ # Project documentation
-└── SRS.md # Requirements specification
+cinema-system/  
+├── backend/ # Spring Boot application  
+│ ├── src/  
+│ │ └── main/java/com/cinema/   
+│ │ ├── controllers/ # REST controllers 
+│ │ ├── services/ # Business logic  
+│ │ ├── models/ # Entity classes    
+│ │ ├── repositories/ # Data access layer   
+│ │ └── security/ # Auth configuration  
+│ └── pom.xml   
+├── frontend/ # React application   
+│ ├── src/  
+│ │ ├── components/ # React components  
+│ │ ├── pages/ # Page components    
+│ │ ├── services/ # API services    
+│ │ └── types/ # TypeScript definitions 
+│ └── package.json  
+└── docs/ # Project documentation   
+└── SRS.md # Requirements specification 
 
 ## 🚀 Quick Start
 

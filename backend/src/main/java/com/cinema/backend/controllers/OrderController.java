@@ -2,6 +2,7 @@ package com.cinema.backend.controllers;
 
 import com.cinema.backend.models.Order;
 import com.cinema.backend.repositories.OrderRepository;
+import com.cinema.backend.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,9 +14,12 @@ public class OrderController {
     @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
+    private OrderService orderService;
+
     @PostMapping("/api/v1/order")
-    Order newOrder(@RequestBody Order newOrder) {
-        return orderRepository.save(newOrder);
+    public Order newOrder(@RequestBody Order newOrder) {
+        return orderService.createOrder(newOrder);
     }
 
     @GetMapping("/api/v1/order/{userId}")

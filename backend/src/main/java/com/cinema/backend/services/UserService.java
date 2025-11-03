@@ -1,5 +1,6 @@
 package com.cinema.backend.services;
 
+import com.cinema.backend.exceptions.UserAlreadyExistsException;
 import com.cinema.backend.models.User;
 import com.cinema.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,14 @@ public class UserService {
     }
 
     public User registerUser(User newUser) {
+        if (userRepository.findByEmail(newUser.getEmail()) != null) {
+            throw new UserAlreadyExistsException("Email already in use");
+        }
         String encodedPassword = passwordEncoder.encode(newUser.getPassword());
         newUser.setPassword(encodedPassword);
         return userRepository.save(newUser);
     }
+
 
     public User getUserByEmail(String email) {
         return userRepository.findByEmail(email);
